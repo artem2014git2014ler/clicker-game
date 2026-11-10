@@ -1,0 +1,14 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="clickGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#7608AA;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#5a0688;stop-opacity:1" />
+        </linearGradient>
+        <filter id="clickShadow">
+            <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+        </filter>
+    </defs>
+    <circle cx="60" cy="60" r="55" fill="url(#clickGrad)" filter="url(#clickShadow)"/>
+    <circle cx="60" cy="60" r="48" fill="none" stroke="#fff" stroke-width="3" opacity="0.3"/>
+    <text x="60" y="68" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold" font-family="Arial">CLICK</text>
+</svg>

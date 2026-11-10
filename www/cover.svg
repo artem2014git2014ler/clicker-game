@@ -1,0 +1,94 @@
+<svg width="800" height="470" viewBox="0 0 800 470" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="coverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#7608AA;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#5a0688;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="btnGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#9b0fd6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#7608AA;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="coinShine" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#ffed4e;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#f0c000;stop-opacity:1" />
+        </linearGradient>
+        <filter id="coverShadow">
+            <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+        </filter>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+    <!-- Фон -->
+    <rect width="800" height="470" fill="url(#coverGrad)"/>
+    
+    <!-- Декоративные круги на фоне -->
+    <circle cx="700" cy="80" r="150" fill="#fff" opacity="0.05"/>
+    <circle cx="100" cy="390" r="180" fill="#fff" opacity="0.05"/>
+    <circle cx="400" cy="235" r="250" fill="#fff" opacity="0.03"/>
+    
+    <!-- Заголовок -->
+    <text x="400" y="80" text-anchor="middle" fill="#fff" font-size="60" font-weight="bold" font-family="Arial, sans-serif" filter="url(#glow)">CLICKER GAME</text>
+    
+    <!-- Основная кнопка CLICK -->
+    <g transform="translate(400, 235)">
+        <circle cx="0" cy="0" r="120" fill="#fff" filter="url(#coverShadow)"/>
+        <circle cx="0" cy="0" r="110" fill="url(#btnGrad)"/>
+        <circle cx="0" cy="0" r="100" fill="none" stroke="#fff" stroke-width="4" opacity="0.3"/>
+        <text x="0" y="20" text-anchor="middle" fill="#fff" font-size="60" font-weight="bold" font-family="Arial, sans-serif">CLICK</text>
+    </g>
+    
+    <!-- Монеты слева -->
+    <g transform="translate(120, 200)">
+        <circle cx="0" cy="0" r="50" fill="url(#coinShine)" filter="url(#coverShadow)"/>
+        <circle cx="0" cy="0" r="42" fill="none" stroke="#c9a800" stroke-width="3"/>
+        <text x="0" y="15" text-anchor="middle" fill="#8b7000" font-size="55" font-weight="bold" font-family="Arial">$</text>
+    </g>
+    
+    <g transform="translate(80, 320)">
+        <circle cx="0" cy="0" r="40" fill="url(#coinShine)" filter="url(#coverShadow)" opacity="0.9"/>
+        <circle cx="0" cy="0" r="34" fill="none" stroke="#c9a800" stroke-width="2.5"/>
+        <text x="0" y="12" text-anchor="middle" fill="#8b7000" font-size="45" font-weight="bold" font-family="Arial">$</text>
+    </g>
+    
+    <!-- Монеты справа -->
+    <g transform="translate(680, 200)">
+        <circle cx="0" cy="0" r="50" fill="url(#coinShine)" filter="url(#coverShadow)"/>
+        <circle cx="0" cy="0" r="42" fill="none" stroke="#c9a800" stroke-width="3"/>
+        <text x="0" y="15" text-anchor="middle" fill="#8b7000" font-size="55" font-weight="bold" font-family="Arial">$</text>
+    </g>
+    
+    <g transform="translate(720, 320)">
+        <circle cx="0" cy="0" r="40" fill="url(#coinShine)" filter="url(#coverShadow)" opacity="0.9"/>
+        <circle cx="0" cy="0" r="34" fill="none" stroke="#c9a800" stroke-width="2.5"/>
+        <text x="0" y="12" text-anchor="middle" fill="#8b7000" font-size="45" font-weight="bold" font-family="Arial">$</text>
+    </g>
+    
+    <!-- Летающие монеты -->
+    <g transform="translate(200, 120)">
+        <circle cx="0" cy="0" r="25" fill="url(#coinShine)" opacity="0.7"/>
+        <text x="0" y="8" text-anchor="middle" fill="#8b7000" font-size="28" font-weight="bold" font-family="Arial">$</text>
+    </g>
+    
+    <g transform="translate(600, 120)">
+        <circle cx="0" cy="0" r="25" fill="url(#coinShine)" opacity="0.7"/>
+        <text x="0" y="8" text-anchor="middle" fill="#8b7000" font-size="28" font-weight="bold" font-family="Arial">$</text>
+    </g>
+    
+    <!-- Подзаголовок -->
+    <text x="400" y="400" text-anchor="middle" fill="#fff" font-size="28" font-family="Arial, sans-serif" opacity="0.9">Кликай, зарабатывай, улучшай!</text>
+    
+    <!-- Магазин иконка внизу слева -->
+    <g transform="translate(60, 420)">
+        <circle cx="0" cy="0" r="30" fill="#fff" opacity="0.9"/>
+        <rect x="-18" y="-10" width="36" height="25" fill="none" stroke="#7608AA" stroke-width="2" rx="2"/>
+        <path d="M-15 -15 L0 -22 L15 -15" fill="none" stroke="#7608AA" stroke-width="2" stroke-linecap="round"/>
+        <text x="0" y="2" text-anchor="middle" fill="#7608AA" font-size="8" font-weight="bold" font-family="Arial">SHOP</text>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="coinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#7608AA;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#5a0688;stop-opacity:1" />
+        </linearGradient>
+        <filter id="coinShadow">
+            <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
+        </filter>
+    </defs>
+    <ellipse cx="30" cy="30" rx="26" ry="26" fill="url(#coinGrad)" filter="url(#coinShadow)"/>
+    <ellipse cx="30" cy="30" rx="22" ry="22" fill="none" stroke="#fff" stroke-width="2" opacity="0.5"/>
+    <ellipse cx="30" cy="30" rx="18" ry="18" fill="none" stroke="#fff" stroke-width="1" opacity="0.3"/>
+    <text x="30" y="38" text-anchor="middle" fill="#fff" font-size="26" font-weight="bold" font-family="Arial">$</text>
+</svg>

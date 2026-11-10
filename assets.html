@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровые ассеты - Кликер</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a2e;
+            color: #fff;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+        h1 {
+            color: #ffd700;
+        }
+        .assets-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+        }
+        .asset-card {
+            background: #16213e;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .asset-card h3 {
+            margin: 0 0 15px 0;
+            color: #4ecdc4;
+        }
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100px;
+        }
+        .download-btn {
+            background: #4ecdc4;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 15px;
+            color: #1a1a2e;
+            font-weight: bold;
+        }
+        .download-btn:hover {
+            background: #45b7aa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ассеты для игры-кликер</h1>
+    
+    <div class="assets-container">
+        <!-- Кнопка Click -->
+        <div class="asset-card">
+            <h3>Кнопка Click</h3>
+            <div class="svg-container">
+                <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="clickGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ee5a5a;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="clickShadow">
+                            <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+                        </filter>
+                    </defs>
+                    <circle cx="60" cy="60" r="55" fill="url(#clickGrad)" filter="url(#clickShadow)"/>
+                    <circle cx="60" cy="60" r="48" fill="none" stroke="#fff" stroke-width="3" opacity="0.3"/>
+                    <text x="60" y="68" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold" font-family="Arial">CLICK</text>
+                </svg>
+            </div>
+            <button class="download-btn" onclick="downloadSVG('click-btn', 'click.svg')">Скачать SVG</button>
+        </div>
+
+        <!-- Кнопка темы -->
+        <div class="asset-card">
+            <h3>Кнопка темы</h3>
+            <div class="svg-container">
+                <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="themeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="themeShadow">
+                            <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.25"/>
+                        </filter>
+                    </defs>
+                    <circle cx="40" cy="40" r="36" fill="url(#themeGrad)" filter="url(#themeShadow)"/>
+                    <!-- Солнце/Луна иконка -->
+                    <circle cx="40" cy="40" r="15" fill="#ffd93d"/>
+                    <circle cx="50" cy="35" r="12" fill="url(#themeGrad)"/>
+                    <!-- Лучи -->
+                    <g stroke="#ffd93d" stroke-width="2.5" stroke-linecap="round">
+                        <line x1="40" y1="18" x2="40" y2="10"/>
+                        <line x1="40" y1="70" x2="40" y2="62"/>
+                        <line x1="18" y1="40" x2="10" y2="40"/>
+                        <line x1="70" y1="40" x2="62" y2="40"/>
+                        <line x1="24.5" y1="24.5" x2="18.8" y2="18.8"/>
+                        <line x1="61.2" y1="61.2" x2="55.5" y2="55.5"/>
+                        <line x1="24.5" y1="55.5" x2="18.8" y2="61.2"/>
+                        <line x1="61.2" y1="18.8" x2="55.5" y2="24.5"/>
+                    </g>
+                </svg>
+            </div>
+            <button class="download-btn" onclick="downloadSVG('theme-btn', 'theme.svg')">Скачать SVG</button>
+        </div>
+
+        <!-- Кнопка магазина -->
+        <div class="asset-card">
+            <h3>Кнопка магазина</h3>
+            <div class="svg-container">
+                <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="shopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#11998e;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="shopShadow">
+                            <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.25"/>
+                        </filter>
+                    </defs>
+                    <circle cx="40" cy="40" r="36" fill="url(#shopGrad)" filter="url(#shopShadow)"/>
+                    <!-- Корзина -->
+                    <path d="M22 28 L28 28 L32 52 L52 52 L56 28 L62 28" 
+                          fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <ellipse cx="36" cy="60" rx="4" ry="4" fill="#fff"/>
+                    <ellipse cx="50" cy="60" rx="4" ry="4" fill="#fff"/>
+                    <path d="M30 34 L54 34" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M32 42 L52 42" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <button class="download-btn" onclick="downloadSVG('shop-btn', 'shop.svg')">Скачать SVG</button>
+        </div>
+
+        <!-- Иконка монеты -->
+        <div class="asset-card">
+            <h3>Иконка монеты</h3>
+            <div class="svg-container">
+                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="coinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#ffed4e;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#f0c000;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="coinShadow">
+                            <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
+                        </filter>
+                    </defs>
+                    <ellipse cx="30" cy="30" rx="26" ry="26" fill="url(#coinGrad)" filter="url(#coinShadow)"/>
+                    <ellipse cx="30" cy="30" rx="22" ry="22" fill="none" stroke="#c9a800" stroke-width="2"/>
+                    <ellipse cx="30" cy="30" rx="18" ry="18" fill="none" stroke="#c9a800" stroke-width="1" opacity="0.5"/>
+                    <text x="30" y="38" text-anchor="middle" fill="#8b7000" font-size="26" font-weight="bold" font-family="Arial">$</text>
+                </svg>
+            </div>
+            <button class="download-btn" onclick="downloadSVG('coin-icon', 'coin.svg')">Скачать SVG</button>
+        </div>
+    </div>
+
+    <!-- Отдельные SVG файлы для экспорта -->
+    <div hidden>
+        <!-- Click Button SVG -->
+        <svg id="click-btn" width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="clickGradExport" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#ee5a5a;stop-opacity:1" />
+                </linearGradient>
+                <filter id="clickShadowExport">
+                    <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+                </filter>
+            </defs>
+            <circle cx="60" cy="60" r="55" fill="url(#clickGradExport)" filter="url(#clickShadowExport)"/>
+            <circle cx="60" cy="60" r="48" fill="none" stroke="#fff" stroke-width="3" opacity="0.3"/>
+            <text x="60" y="68" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold" font-family="Arial">CLICK</text>
+        </svg>
+
+        <!-- Theme Button SVG -->
+        <svg id="theme-btn" width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="themeGradExport" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                </linearGradient>
+                <filter id="themeShadowExport">
+                    <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.25"/>
+                </filter>
+            </defs>
+            <circle cx="40" cy="40" r="36" fill="url(#themeGradExport)" filter="url(#themeShadowExport)"/>
+            <circle cx="40" cy="40" r="15" fill="#ffd93d"/>
+            <circle cx="50" cy="35" r="12" fill="url(#themeGradExport)"/>
+            <g stroke="#ffd93d" stroke-width="2.5" stroke-linecap="round">
+                <line x1="40" y1="18" x2="40" y2="10"/>
+                <line x1="40" y1="70" x2="40" y2="62"/>
+                <line x1="18" y1="40" x2="10" y2="40"/>
+                <line x1="70" y1="40" x2="62" y2="40"/>
+                <line x1="24.5" y1="24.5" x2="18.8" y2="18.8"/>
+                <line x1="61.2" y1="61.2" x2="55.5" y2="55.5"/>
+                <line x1="24.5" y1="55.5" x2="18.8" y2="61.2"/>
+                <line x1="61.2" y1="18.8" x2="55.5" y2="24.5"/>
+            </g>
+        </svg>
+
+        <!-- Shop Button SVG -->
+        <svg id="shop-btn" width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="shopGradExport" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#11998e;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#38ef7d;stop-opacity:1" />
+                </linearGradient>
+                <filter id="shopShadowExport">
+                    <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.25"/>
+                </filter>
+            </defs>
+            <circle cx="40" cy="40" r="36" fill="url(#shopGradExport)" filter="url(#shopShadowExport)"/>
+            <path d="M22 28 L28 28 L32 52 L52 52 L56 28 L62 28" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <ellipse cx="36" cy="60" rx="4" ry="4" fill="#fff"/>
+            <ellipse cx="50" cy="60" rx="4" ry="4" fill="#fff"/>
+            <path d="M30 34 L54 34" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <path d="M32 42 L52 42" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Coin Icon SVG -->
+        <svg id="coin-icon" width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="coinGradExport" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#ffed4e;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#f0c000;stop-opacity:1" />
+                </linearGradient>
+                <filter id="coinShadowExport">
+                    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
+                </filter>
+            </defs>
+            <ellipse cx="30" cy="30" rx="26" ry="26" fill="url(#coinGradExport)" filter="url(#coinShadowExport)"/>
+            <ellipse cx="30" cy="30" rx="22" ry="22" fill="none" stroke="#c9a800" stroke-width="2"/>
+            <ellipse cx="30" cy="30" rx="18" ry="18" fill="none" stroke="#c9a800" stroke-width="1" opacity="0.5"/>
+            <text x="30" y="38" text-anchor="middle" fill="#8b7000" font-size="26" font-weight="bold" font-family="Arial">$</text>
+        </svg>
+    </div>
+
+    <script>
+        function downloadSVG(elementId, filename) {
+            const svg = document.getElementById(elementId);
+            const svgData = new XMLSerializer().serializeToString(svg);
+            const blob = new Blob([svgData], {type: 'image/svg+xml'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>

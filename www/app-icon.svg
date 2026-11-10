@@ -1,0 +1,52 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="appGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#7608AA;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#5a0688;stop-opacity:1" />
+        </linearGradient>
+        <filter id="appShadow">
+            <feDropShadow dx="0" dy="16" stdDeviation="12" flood-color="#000" flood-opacity="0.3"/>
+        </filter>
+        <linearGradient id="coinShine" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#ffed4e;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#f0c000;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Фон -->
+    <rect width="512" height="512" rx="100" fill="url(#appGrad)"/>
+    
+    <!-- Основной круг кнопки -->
+    <circle cx="256" cy="256" r="200" fill="#fff" filter="url(#appShadow)"/>
+    <circle cx="256" cy="256" r="185" fill="url(#appGrad)"/>
+    <circle cx="256" cy="256" r="170" fill="none" stroke="#fff" stroke-width="8" opacity="0.3"/>
+    
+    <!-- Текст CLICK -->
+    <text x="256" y="290" text-anchor="middle" fill="#fff" font-size="100" font-weight="bold" font-family="Arial, sans-serif">CLICK</text>
+    
+    <!-- Декоративные монеты по углам -->
+    <g transform="translate(100, 100)">
+        <circle cx="0" cy="0" r="40" fill="url(#coinShine)" opacity="0.9"/>
+        <circle cx="0" cy="0" r="34" fill="none" stroke="#c9a800" stroke-width="3"/>
+        <text x="0" y="12" text-anchor="middle" fill="#8b7000" font-size="45" font-weight="bold" font-family="Arial">$</text>
+    </g>
+    
+    <g transform="translate(412, 100)">
+        <circle cx="0" cy="0" r="40" fill="url(#coinShine)" opacity="0.9"/>
+        <circle cx="0" cy="0" r="34" fill="none" stroke="#c9a800" stroke-width="3"/>
+        <text x="0" y="12" text-anchor="middle" fill="#8b7000" font-size="45" font-weight="bold" font-family="Arial">$</text>
+    </g>
+    
+    <g transform="translate(100, 412)">
+        <circle cx="0" cy="0" r="40" fill="url(#coinShine)" opacity="0.9"/>
+        <circle cx="0" cy="0" r="34" fill="none" stroke="#c9a800" stroke-width="3"/>
+        <text x="0" y="12" text-anchor="middle" fill="#8b7000" font-size="45" font-weight="bold" font-family="Arial">$</text>
+    </g>
+    
+    <g transform="translate(412, 412)">
+        <circle cx="0" cy="0" r="40" fill="url(#coinShine)" opacity="0.9"/>
+        <circle cx="0" cy="0" r="34" fill="none" stroke="#c9a800" stroke-width="3"/>
+        <text x="0" y="12" text-anchor="middle" fill="#8b7000" font-size="45" font-weight="bold" font-family="Arial">$</text>
+    </g>
+</svg>

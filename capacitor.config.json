@@ -1,0 +1,8 @@
+{
+  "appId": "com.clicker.game",
+  "appName": "Clicker Game",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}

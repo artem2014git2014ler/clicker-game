@@ -1,0 +1,25 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="shopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#7608AA;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#5a0688;stop-opacity:1" />
+        </linearGradient>
+        <filter id="shopShadow">
+            <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.25"/>
+        </filter>
+    </defs>
+    <circle cx="40" cy="40" r="36" fill="url(#shopGrad)" filter="url(#shopShadow)"/>
+    <!-- Здание магазина -->
+    <!-- Крыша -->
+    <path d="M20 35 L40 22 L60 35" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Стены здания -->
+    <rect x="23" y="35" width="34" height="25" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Вывеска SHOP -->
+    <rect x="26" y="38" width="28" height="10" fill="#fff" rx="1"/>
+    <text x="40" y="46" text-anchor="middle" fill="#5a0688" font-size="8" font-weight="bold" font-family="Arial">SHOP</text>
+    <!-- Дверь -->
+    <rect x="35" y="50" width="10" height="10" fill="#fff" rx="1"/>
+    <!-- Окна -->
+    <rect x="26" y="50" width="7" height="7" fill="#fff" rx="1"/>
+    <rect x="47" y="50" width="7" height="7" fill="#fff" rx="1"/>
+</svg>

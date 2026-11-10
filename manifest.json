@@ -1,0 +1,24 @@
+{
+  "name": "Clicker Game",
+  "short_name": "Clicker",
+  "description": "Захватывающая игра-кликер",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#7608AA",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "app-icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "click-btn.svg",
+      "sizes": "120x120",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["games", "entertainment"]
+}

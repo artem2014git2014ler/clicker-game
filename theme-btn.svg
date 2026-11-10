@@ -1,0 +1,26 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="themeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#7608AA;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#5a0688;stop-opacity:1" />
+        </linearGradient>
+        <filter id="themeShadow">
+            <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.25"/>
+        </filter>
+    </defs>
+    <circle cx="40" cy="40" r="36" fill="url(#themeGrad)" filter="url(#themeShadow)"/>
+    <!-- Солнце/Луна иконка -->
+    <circle cx="40" cy="40" r="15" fill="#fff"/>
+    <circle cx="50" cy="35" r="12" fill="url(#themeGrad)"/>
+    <!-- Лучи -->
+    <g stroke="#fff" stroke-width="2.5" stroke-linecap="round">
+        <line x1="40" y1="18" x2="40" y2="10"/>
+        <line x1="40" y1="70" x2="40" y2="62"/>
+        <line x1="18" y1="40" x2="10" y2="40"/>
+        <line x1="70" y1="40" x2="62" y2="40"/>
+        <line x1="24.5" y1="24.5" x2="18.8" y2="18.8"/>
+        <line x1="61.2" y1="61.2" x2="55.5" y2="55.5"/>
+        <line x1="24.5" y1="55.5" x2="18.8" y2="61.2"/>
+        <line x1="61.2" y1="18.8" x2="55.5" y2="24.5"/>
+    </g>
+</svg>
