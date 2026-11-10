@@ -10,7 +10,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: reactnativecommunity/react-native-android:latest
     
     steps:
     - name: Checkout repository
@@ -24,7 +23,18 @@ jobs:
     - name: Install dependencies
       run: |
         npm install
-        npm install -g @capacitor/cli
+    
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+    
+    - name: Install Capacitor CLI
+      run: npm install -g @capacitor/cli
     
     - name: Add Android platform
       run: npx cap add android || true
@@ -32,12 +42,8 @@ jobs:
     - name: Sync Capacitor
       run: npx cap sync android
     
-    - name: Grant execute permission for gradlew
-      run: chmod +x ./android/gradlew
-    
     - name: Build APK
-      working-directory: ./android
-      run: ./gradlew assembleDebug --no-daemon
+      run: cd android && chmod +x gradlew && ./gradlew assembleDebug --no-daemon
     
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
