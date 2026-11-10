@@ -21,8 +21,7 @@ jobs:
         node-version: '20'
     
     - name: Install dependencies
-      run: |
-        npm install
+      run: npm install
     
     - name: Setup Java
       uses: actions/setup-java@v4
@@ -31,7 +30,11 @@ jobs:
         java-version: '17'
     
     - name: Setup Android SDK
-      uses: android-actions/setup-android@v3
+      run: |
+        export ANDROID_HOME=/usr/local/lib/android/sdk
+        export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+        yes | sdkmanager --licenses || true
+        sdkmanager "platform-tools" "platforms;android-33" "build-tools;33.0.0"
     
     - name: Install Capacitor CLI
       run: npm install -g @capacitor/cli
