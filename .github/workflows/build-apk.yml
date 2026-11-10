@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: reactnativecommunity/react-native-android:latest
     
     steps:
     - name: Checkout repository
@@ -24,17 +25,6 @@ jobs:
       run: |
         npm install
         npm install -g @capacitor/cli
-    
-    - name: Setup Java
-      uses: actions/setup-java@v4
-      with:
-        distribution: 'temurin'
-        java-version: '17'
-    
-    - name: Setup Android SDK
-      uses: maxim-lobanov/setup-android-tools@v1
-      with:
-        cache-enabled: true
     
     - name: Add Android platform
       run: npx cap add android || true
